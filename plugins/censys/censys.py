@@ -20,7 +20,7 @@ class censys(BotPlugin):
         if json_resp.get("error", False):
             answer = 'Error: ' + json_resp["error"] + "\r\n"
         else:
-            answer = "IP: {0}\r\n".format(", ".join(json_resp["ip"]))
+            answer = "IP: {0}\r\n".format(ip)
             answer += "Tags: {0}\r\n".format(", ".join(json_resp["tags"]))
             answer += "Protocols: {0}\r\n".format(", ".join(json_resp["protocols"]))
             if (80) in json_resp["ports"]:
