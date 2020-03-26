@@ -37,5 +37,5 @@ class censys(BotPlugin):
                     )
                 except KeyError:
                     pass
-            answer += "Updated at: {0}\r\n".format(", ".join(json_resp["updated_at"]))
+            answer += "Updated at: {0}\r\n".format(json_resp["updated_at"])
         return answer
