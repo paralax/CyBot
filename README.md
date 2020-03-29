@@ -23,6 +23,7 @@ We are excited to share with the world a chat bot that we affectionately call Cy
  !whois \<domain> - WHOIS Query (ex: cylance[.]com)   
  !nslookup \<FQDN|IP> - DNS forward/reverse Query (ex: www[.]cylance[.]com)  
  !geoip \<FQDN|IP> - Perform GeoIP lookup of host (ex: www[.]cylance[.]com)  
+ !censys \<IP> - Return Censys information on host (ex: 1.2.3.4)
  !unshorten \<shortened URL> - Unshortens URLs (ex: goo[.]gl/IGL1lE)  
  !screenshot <defanged URL> - Takes a screenshot of a website and returns the .png - Accepts defanged [()] URLs  
  !linkextractor \<FQDN|IP> - Extracts links from a site and safely displays them (ex: hxxps://www[.]google[.]com)  

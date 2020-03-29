@@ -1,0 +1,9 @@
+[Core]
+Name = censys
+Module = censts
+
+[Documentation]
+Description = This plugin queries Censys.io for information about an IP address.
+
+[Python]
+Version = 2+
