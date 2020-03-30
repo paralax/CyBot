@@ -13,6 +13,7 @@ class censys(BotPlugin):
     def censys(self, msg, query=None):
         query = re.sub("[\[()\]]", "", query)
         uri = "view/ipv4/{}".format(query)
+        api_creds = (api_id, api_secret)
         response = requests.get(base_url + uri, auth=api_creds)
         json_resp = response.json()
 
