@@ -17,12 +17,10 @@ class censys(BotPlugin):
         response = requests.get(base_url + uri, auth=api_creds)
         json_resp = response.json()
 
-        answer = "Status: " + json_resp["status"] + "\r\n"
-
         if json_resp.get("error", False):
-            answer += json_resp["error"] + "\r\n"
+            answer = 'Error: ' + json_resp["error"] + "\r\n"
         else:
-            answer += "IP: {0}\r\n".format(", ".join(json_resp["ip"]))
+            answer = "IP: {0}\r\n".format(", ".join(json_resp["ip"]))
             answer += "Tags: {0}\r\n".format(", ".join(json_resp["tags"]))
             answer += "Protocols: {0}\r\n".format(", ".join(json_resp["protocols"]))
             if (80) in json_resp["ports"]:
